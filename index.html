@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Bar Menu</title>
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      font-family: "Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
       background: #111;
       color: #eee;
     }
@@ -19,16 +19,15 @@
     h1 {
       text-align: center;
       letter-spacing: 0.15em;
-      margin-bottom: 32px;
-      font-weight: 600;
+      margin-bottom: 40px;
     }
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
     .section h2 {
       border-bottom: 1px solid #444;
       padding-bottom: 8px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       font-size: 1.2rem;
       letter-spacing: 0.1em;
     }
@@ -39,7 +38,7 @@
     }
     .menu-card {
       background: #1a1a1a;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
@@ -47,15 +46,16 @@
       width: 100%;
       height: 160px;
       object-fit: cover;
+      display: block;
     }
-    .menu-card .info {
+    .info {
       padding: 12px;
     }
-    .menu-card .name {
+    .name {
       font-weight: 600;
       margin-bottom: 4px;
     }
-    .menu-card .desc {
+    .desc {
       font-size: 0.8rem;
       color: #aaa;
     }
@@ -63,8 +63,8 @@
       background: #333;
       color: #eee;
       border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
       font-size: 1rem;
       cursor: pointer;
     }
@@ -76,78 +76,96 @@
     }
   </style>
 </head>
+
 <body>
-  <div class="menu">
-    <h1>HOME BAR MENU</h1>
+<div class="menu">
 
-    <div style="text-align:center; margin-bottom:40px;">
-      <button onclick="recommend()">🍸 気分でおまかせ</button>
-      <div id="recommendation" style="margin-top:16px;"></div>
-    </div>
+<h1>HOME BAR MENU</h1>
 
-    <div class="section">
-      <h2>COCKTAILS</h2>
-      <div class="section">
-  <h2>WHISKY</h2>
+<div style="text-align:center; margin-bottom:48px;">
+  <button onclick="recommend()">🍸 気分でおまかせ</button>
+  <div id="recommendation" style="margin-top:16px;"></div>
+</div>
+
+<div class="section">
+  <h2>COCKTAILS</h2>
   <div class="menu-grid">
     <div class="menu-card">
-      <img src="https://source.unsplash.com/400x300/?whisky,highball">
+      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80">
       <div class="info">
-        <div class="name">Highball</div>
-        <div class="desc">食事に合う定番</div>
+        <div class="name">Gin & Tonic</div>
+        <div class="desc">爽快・定番</div>
       </div>
     </div>
     <div class="menu-card">
-      <img src="https://source.unsplash.com/400x300/?whisky,rock">
+      <img src="https://images.unsplash.com/photo-1514361892635-eae31d3d305e?auto=format&fit=crop&w=800&q=80">
       <div class="info">
-        <div class="name">Whisky on the Rocks</div>
-        <div class="desc">香りをじっくり</div>
+        <div class="name">Moscow Mule</div>
+        <div class="desc">ジンジャーの刺激</div>
       </div>
     </div>
   </div>
 </div>
 
-      <div class="menu-grid">
-        <div class="menu-card">
-          <img src="https://source.unsplash.com/400x300/?cocktail,gin%20tonic">
-          <div class="info">
-            <div class="name">Gin & Tonic</div>
-            <div class="desc">爽快・定番</div>
-          </div>
-        </div>
-        <div class="menu-card">
-          <img src="https://source.unsplash.com/400x300/?cocktail,moscow%20mule">
-          <div class="info">
-            <div class="name">Moscow Mule</div>
-            <div class="desc">ジンジャーの刺激</div>
-          </div>
-        </div>
-        <div class="menu-card">
-          <img src="https://source.unsplash.com/400x300/?cocktail,highball">
-          <div class="info">
-            <div class="name">Highball</div>
-            <div class="desc">ウイスキー × ソーダ</div>
-          </div>
-        </div>
+<div class="section">
+  <h2>WHISKY</h2>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=80">
+      <div class="info">
+        <div class="name">Highball</div>
+        <div class="desc">食事に合う</div>
       </div>
     </div>
-
-    <footer>Please relax and enjoy your time.</footer>
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=800&q=80">
+      <div class="info">
+        <div class="name">Whisky on the Rocks</div>
+        <div class="desc">香りを楽しむ</div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <script>
-    const cocktails = [
-      { name: "Gin & Tonic", desc: "爽快・定番" },
-      { name: "Moscow Mule", desc: "ジンジャーの刺激" },
-      { name: "Highball", desc: "ウイスキー × ソーダ" },
-      { name: "Campari Soda", desc: "ほろ苦い大人向け" },
-      { name: "Cassis Orange", desc: "甘めで飲みやすい" }
-    ];
-    function recommend() {
-      const r = cocktails[Math.floor(Math.random() * cocktails.length)];
-      document.getElementById("recommendation").innerHTML =
-        "<div><strong>今日のおすすめ：</strong>" + r.name + "<br><span style='font-size:0.8rem;color:#aaa;'>" + r.desc + "</span></div>";
-    }
-  </script>
+<div class="section">
+  <h2>NON-ALCOHOL</h2>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80">
+      <div class="info">
+        <div class="name">Virgin Mojito</div>
+        <div class="desc">ミントで爽快</div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1542444459-db63c5a1b4a0?auto=format&fit=crop&w=800&q=80">
+      <div class="info">
+        <div class="name">Orange Juice</div>
+        <div class="desc">定番ノンアル</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>Please relax and enjoy your time.</footer>
+
+</div>
+
+<script>
+const menus = [
+  "Gin & Tonic",
+  "Moscow Mule",
+  "Highball",
+  "Whisky on the Rocks",
+  "Virgin Mojito",
+  "Orange Juice"
+];
+function recommend() {
+  const r = menus[Math.floor(Math.random() * menus.length)];
+  document.getElementById("recommendation").innerHTML =
+    "<strong>今日のおすすめ：</strong>" + r;
+}
+</script>
+
 </body>
 </html>
