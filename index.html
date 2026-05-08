@@ -1,171 +1,228 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Bar Menu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VEGE BAR</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: "Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
-      background: #111;
-      color: #eee;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .menu {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 24px;
+
+    body {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      background: #f4efe6;
+      color: #2d2a26;
+      line-height: 1.8;
     }
-    h1 {
+
+    .hero {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      letter-spacing: 0.15em;
-      margin-bottom: 40px;
+      color: white;
+      padding: 20px;
     }
-    .section {
-      margin-bottom: 48px;
+
+    .hero-content h1 {
+      font-size: 4rem;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
     }
-    .section h2 {
-      border-bottom: 1px solid #444;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-      letter-spacing: 0.1em;
+
+    .hero-content p {
+      font-size: 1.1rem;
+      opacity: 0.9;
     }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      border-left: 4px solid #556b4f;
+      padding-left: 15px;
+      color: #3e4d38;
+    }
+
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
     }
+
     .menu-card {
-      background: #1a1a1a;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      background: rgba(255,255,255,0.7);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s ease;
     }
-    .menu-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      display: block;
+
+    .menu-card:hover {
+      transform: translateY(-4px);
     }
-    .info {
-      padding: 12px;
+
+    .menu-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #2f3b2a;
     }
-    .name {
-      font-weight: 600;
-      margin-bottom: 4px;
+
+    .price {
+      color: #6f7f67;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
-    .desc {
-      font-size: 0.8rem;
-      color: #aaa;
+
+    .concept {
+      background: #e8dfd0;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 30px;
     }
-    button {
-      background: #333;
-      color: #eee;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-size: 1rem;
-      cursor: pointer;
+
+    .concept h2 {
+      margin-bottom: 20px;
+      color: #3e4d38;
     }
+
     footer {
       text-align: center;
-      margin-top: 60px;
-      font-size: 0.8rem;
+      padding: 30px;
       color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero {
+        height: 50vh;
+      }
     }
   </style>
 </head>
-
 <body>
-<div class="menu">
 
-<h1>HOME BAR MENU</h1>
-
-<div style="text-align:center; margin-bottom:48px;">
-  <button onclick="recommend()">🍸 気分でおまかせ</button>
-  <div id="recommendation" style="margin-top:16px;"></div>
-</div>
-
-<div class="section">
-  <h2>COCKTAILS</h2>
-  <div class="menu-grid">
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <div class="name">Gin & Tonic</div>
-        <div class="desc">爽快・定番</div>
-      </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>VEGE BAR</h1>
+      <p>Herb & Mocktail / Kominka Home Bar</p>
     </div>
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1514361892635-eae31d3d305e?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <div class="name">Moscow Mule</div>
-        <div class="desc">ジンジャーの刺激</div>
+  </section>
+
+  <div class="container">
+
+    <h2 class="section-title">Signature Drinks</h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200&auto=format&fit=crop" alt="Rosemary Tonic" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
+        <h3>Rosemary Tonic</h3>
+        <div class="price">¥700</div>
+        <p>
+          庭で育てたローズマリーを使った、
+          香りを楽しむ爽やかなトニック。
+        </p>
       </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1200&auto=format&fit=crop" alt="Lavender Lemonade" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
+        <h3>Lavender Lemonade</h3>
+        <div class="price">¥750</div>
+        <p>
+          ラベンダーがほんのり香る、
+          やさしいレモネード。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?q=80&w=1200&auto=format&fit=crop" alt="Lemongrass Soda" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
+        <h3>Lemongrass Soda</h3>
+        <div class="price">¥700</div>
+        <p>
+          レモングラスの香りと炭酸の
+          すっきりした後味。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200&auto=format&fit=crop" alt="Sage Smoke Soda" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
+        <h3>Sage Smoke Soda</h3>
+        <div class="price">¥800</div>
+        <p>
+          セージを軽く燻して香りを移した、
+          落ち着いた大人向けソーダ。
+        </p>
+      </div>
+
     </div>
+
+    <h2 class="section-title">Food</h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <h3>Homemade Pickles</h3>
+        <div class="price">¥500</div>
+        <p>
+          季節野菜の自家製ピクルス。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <h3>Smoked Nuts</h3>
+        <div class="price">¥450</div>
+        <p>
+          軽く燻したミックスナッツ。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <h3>Cheese Plate</h3>
+        <div class="price">¥700</div>
+        <p>
+          ソーダにも合うチーズ盛り。
+        </p>
+      </div>
+
+    </div>
+
+    <div class="concept">
+      <h2>Concept</h2>
+      <p>
+        古民家の静かな空間で、
+        自家栽培ハーブを使った一杯を。
+        <br><br>
+        季節によってメニューが変わる、
+        小さなホームバーです。
+      </p>
+    </div>
+
   </div>
-</div>
 
-<div class="section">
-  <h2>WHISKY</h2>
-  <div class="menu-grid">
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <div class="name">Highball</div>
-        <div class="desc">食事に合う</div>
-      </div>
-    </div>
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <div class="name">Whisky on the Rocks</div>
-        <div class="desc">香りを楽しむ</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <h2>NON-ALCOHOL</h2>
-  <div class="menu-grid">
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <div class="name">Virgin Mojito</div>
-        <div class="desc">ミントで爽快</div>
-      </div>
-    </div>
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1542444459-db63c5a1b4a0?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <div class="name">Orange Juice</div>
-        <div class="desc">定番ノンアル</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer>Please relax and enjoy your time.</footer>
-
-</div>
-
-<script>
-const menus = [
-  "Gin & Tonic",
-  "Moscow Mule",
-  "Highball",
-  "Whisky on the Rocks",
-  "Virgin Mojito",
-  "Orange Juice"
-];
-function recommend() {
-  const r = menus[Math.floor(Math.random() * menus.length)];
-  document.getElementById("recommendation").innerHTML =
-    "<strong>今日のおすすめ：</strong>" + r;
-}
-</script>
+  <footer>
+    © VEGE BAR
+  </footer>
 
 </body>
 </html>
