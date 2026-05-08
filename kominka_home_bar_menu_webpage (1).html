@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VEGE BAR</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      background: #f4efe6;
+      color: #2d2a26;
+      line-height: 1.8;
+    }
+
+    .hero {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      border-left: 4px solid #556b4f;
+      padding-left: 15px;
+      color: #3e4d38;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .menu-card {
+      background: rgba(255,255,255,0.7);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .menu-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #2f3b2a;
+    }
+
+    .price {
+      color: #6f7f67;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .concept {
+      background: #e8dfd0;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .concept h2 {
+      margin-bottom: 20px;
+      color: #3e4d38;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero {
+        height: 50vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>VEGE BAR</h1>
+      <p>Herb & Mocktail / Kominka Home Bar</p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <h2 class="section-title">Signature Drinks</h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200&auto=format&fit=crop" alt="Rosemary Tonic" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
+        <h3>Rosemary Tonic</h3>
+        <div class="price">¥700</div>
+        <p>
+          庭で育てたローズマリーを使った、
+          香りを楽しむ爽やかなトニック。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1200&auto=format&fit=crop" alt="Lavender Lemonade" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
+        <h3>Lavender Lemonade</h3>
+        <div class="price">¥750</div>
+        <p>
+          ラベンダーがほんのり香る、
+          やさしいレモネード。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?q=80&w=1200&auto=format&fit=crop" alt="Lemongrass Soda" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
+        <h3>Lemongrass Soda</h3>
+        <div class="price">¥700</div>
+        <p>
+          レモングラスの香りと炭酸の
+          すっきりした後味。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200&auto=format&fit=crop" alt="Sage Smoke Soda" style="width:100%; height:220px; object-fit:cover; border-radius:14px; margin-bottom:15px;">
+        <h3>Sage Smoke Soda</h3>
+        <div class="price">¥800</div>
+        <p>
+          セージを軽く燻して香りを移した、
+          落ち着いた大人向けソーダ。
+        </p>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Food</h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <h3>Homemade Pickles</h3>
+        <div class="price">¥500</div>
+        <p>
+          季節野菜の自家製ピクルス。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <h3>Smoked Nuts</h3>
+        <div class="price">¥450</div>
+        <p>
+          軽く燻したミックスナッツ。
+        </p>
+      </div>
+
+      <div class="menu-card">
+        <h3>Cheese Plate</h3>
+        <div class="price">¥700</div>
+        <p>
+          ソーダにも合うチーズ盛り。
+        </p>
+      </div>
+
+    </div>
+
+    <div class="concept">
+      <h2>Concept</h2>
+      <p>
+        古民家の静かな空間で、
+        自家栽培ハーブを使った一杯を。
+        <br><br>
+        季節によってメニューが変わる、
+        小さなホームバーです。
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    © VEGE BAR
+  </footer>
+
+</body>
+</html>
